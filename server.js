@@ -18,7 +18,7 @@ function get_line(filename, line_no, callback) {
 setInterval(function(){
 	var maxNumberOfSource = 14530;
 	var lineNumber = Math.floor(Math.random() * maxNumberOfSource) + 1;
-	get_line('/mnt/c/Users/daniel.g/Documents/underbot/source.json', lineNumber, function(err, line){
+	get_line('source.json', lineNumber, function(err, line){
 	  T.post('statuses/update',
 	  	{ status: line },
 	  	 function(err, data, response) {
@@ -26,8 +26,3 @@ setInterval(function(){
 	  });
 	})
 }, 10000);
-
-
-
-
- /**/
